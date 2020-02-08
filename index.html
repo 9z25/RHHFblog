@@ -4,12 +4,16 @@
     <img src="https://freshmintrecords.com/file-directory/image/rhhf-logo.png" />
     <h5>{{ .Title }}</h5>
 
-    <p>{{ .Article }}</p>
-
+    {{ range .Article }}
+    <p>{{ .Text }}</p>
     <iframe width="560" height="315" src={{ .Video }}
     frameborder="0" 
     allow="autoplay; encrypted-media; gyroscope;" allowfullscreen>
      </iframe>
+    
+    {{ end }}
+    
+    
 
      
 </body>
